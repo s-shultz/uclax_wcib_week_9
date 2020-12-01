@@ -1,0 +1,86 @@
+body {
+  background-color: white;
+  font-family: 'Lato',sans-serif; }
+h2 {
+  font-family:'Playfair Display', serif;
+  font-weight: bold;
+  font-size: 60pt;
+  color: #111111;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.masthead-brand {
+  float: left;
+}
+
+.lead {
+  font-size: 30pt;
+}
+
+footer.mastfoot {
+  padding-top: 300px;
+}
+
+a {
+  font-family: 'Lato',sans-serif;
+  font-weight: 300;
+  color: #111111;
+}
+
+a:hover {
+  color: grey;
+}
+
+ul {
+  background: transparent;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+li {
+  background: transparent;
+  display: block;
+  float: left;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+li {
+ display: block;
+ transition-duration: 0.5s;
+}
+
+li:hover,
+li:focus-within {
+  background: transparent;
+  cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}

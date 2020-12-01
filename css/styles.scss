@@ -1,0 +1,34 @@
+$breakpoints: (
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+); // Respond above.
+@mixin respond-above($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+    // If the breakpoint doesnt exist in the map.
+  } @else {
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+body {
+  // Anything that breaks the code if too small goes here
+  @include respond-above(sm) {
+  }
+  // Anything that breaks the code if too small goes before here
+  background-color: yellow;
+  text-align: center;
+
+  .container{
+    max-width: 3000px;
+  }
+}
